@@ -15,6 +15,6 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node index.js",
-    "build": "webpack"
+    "build": "npm run build"
   }
 }
