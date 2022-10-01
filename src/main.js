@@ -1,9 +1,3 @@
-// work on cmovies so they can be bought as well as the movies \\
-// work on the footer which should explain how the voting will works ||
-// work on removing console logs and insert proper well structured comments throughout the codes \\
-// work on the bigNumber stuff so when buying a movie it should be the exact amount stated on the cards \\
-// style the vote button \\
-
 
 import Web3 from "web3"
 import { newKitFromWeb3 } from "@celo/contractkit"
@@ -18,6 +12,7 @@ const cUSDContractAddress = "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1"
 let kit;
 let contract;
 let classicMovies = []
+
 
 // Connect CeloExtensionWallet to the DApp
 const connectCeloWallet = async function () {

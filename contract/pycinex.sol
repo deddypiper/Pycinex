@@ -20,7 +20,6 @@ contract pycinex {
     address internal cUsdTokenAddress = 0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1;
 
     struct classicMovie {
-        //address payable owner; // check where owner/seller/cinema/my address is inputed/coming from
         string name;
         string year;
         string genre;
