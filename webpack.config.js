@@ -18,9 +18,8 @@ module.exports = {
 	 net: "empty"
 	},
   watchOptions: {
-    // ignored: /node_modules/,
-    aggregateTimeout: 300, // After seeing an edit, wait .3 seconds to recompile
-    poll: 500 // Check for edits every 5 seconds
+    aggregateTimeout: 300,
+    poll: 500 
   },
   plugins: [
     new FriendlyErrorsWebpackPlugin(),
