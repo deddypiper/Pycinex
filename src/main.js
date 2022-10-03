@@ -134,7 +134,12 @@ document.querySelector("#newReleasesMain").addEventListener("click", async (e) =
   if (e.target.className.includes("minus") && movies[index].ticket >= 1) {
     movies[index].ticket--
   }
-  if (e.target.className.includes("buyBtn") && movies[index].ticket >= 1) {
+
+  if ((e.target.className.includes("buyBtn")) && (movies[index].ticket = 0)) {
+    notification(`⚠️ No ticket selected for ${movies[index].name}.`)
+    console.log("working")
+  }
+  if ((e.target.className.includes("buyBtn")) && (movies[index].ticket >= 1)) {
     const totalSum = new BigNumber(movies[index].price * movies[index].ticket).shiftedBy(ERC20_DECIMALS).toString()
     notification("⌛ Waiting for payment approval...")
     try { 
@@ -151,8 +156,6 @@ document.querySelector("#newReleasesMain").addEventListener("click", async (e) =
     } catch (error) {
       notification(`⚠️ ${error}.`)
     }
-  } else {
-    notification(`⚠️ No ticket selected for ${movies[index].name}.`)
   }
   getBalance() 
   renderMovies()

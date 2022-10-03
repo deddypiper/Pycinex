@@ -8,7 +8,7 @@ This is a user-friendly, customer-friendly DApp where users can:
 - Vote for a classic movie to be on show
 
 # Demo Link
-[Pycinex](https://github.com/Pycinex)
+[Pycinex web3 app](https://pycinex.netlify.app/)
 
 
 # Usage
