@@ -41,10 +41,10 @@ const connectCeloWallet = async function () {
 async function approve(_price) {
   const cUSDContract = new kit.web3.eth.Contract(erc20Abi, cUSDContractAddress)
 
-  const result = await cUSDContract.methods
+  return await cUSDContract.methods
     .approve(pycinexContractAddress, _price)
     .send({ from: kit.defaultAccount })
-  return result
+  
 }
 
 // Retrieve Wallet Balance
@@ -201,7 +201,7 @@ document
       document.getElementById("newMovieReleaseYear").value,
       document.getElementById("newMovieGenre").value,
     ]
-    console.log(params)
+    
     notification(`⌛ Adding "${params[0]}"...`)
     try {
       await contract.methods 
@@ -272,7 +272,7 @@ document
         }
       }
     }, false)
-    console.log("meat")
+    
     let movies = [
       {
         id: 0,
